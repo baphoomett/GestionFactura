@@ -25,10 +25,10 @@ public class FacturaController {
 
    @GetMapping
     public ResponseEntity<List<Factura>> getFactura(){
-        if (facturaService.encontrarFactura().isEmpty()){
-            return new ResponseEntity<>(facturaService.encontrarFactura(), HttpStatus.NO_CONTENT);
+        if (facturaService.findAllFacturas().isEmpty()){
+            return new ResponseEntity<>(facturaService.findAllFacturas(), HttpStatus.NO_CONTENT);
         } else {
-            return new ResponseEntity<>(facturaService.encontrarFactura(), HttpStatus.OK);
+            return new ResponseEntity<>(facturaService.findAllFacturas(), HttpStatus.OK);
         }
 
     }

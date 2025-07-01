@@ -51,5 +51,6 @@ public class Factura {
     @Column(nullable = false, length = 250)
     private String correoCliente;
 
-    
+    @Column(nullable = false)
+    private String estado;
 }
